@@ -1,13 +1,103 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+}
+
+.add-block {
+  display: flex;
+}
+
+.add-input {
+  width: 248px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid black;
+  font-size: 16px;
+}
+
+.add-input::placeholder {
+  color: #888;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.with-error.add-input {
+  border: 2px solid red;
+}
+
+.with-error.add-input::placeholder {
+  color: red;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  margin-left: 16px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  background: #646fd4;
+  cursor: pointer;
+}
+
+.columns-block {
+  display: flex;
+  margin-top: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin-right: 40px;
+  padding: 4px;
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.task {
+  display: flex;
+  width: 248px;
+  padding: 16px;
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-weight: 500;
+}
+
+.task.active {
+  border: 1px solid green;
+  box-shadow: rgba(27, 190, 30, 0.932) 0px 0px 14px 1px;
 }
